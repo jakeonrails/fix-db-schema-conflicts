@@ -1,0 +1,25 @@
+Style/NumericLiterals:
+  Exclude:
+    - 'db/schema.rb'
+
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: true
+
+Metrics/BlockNesting:
+  Max: 2
+
+Style/AlignHash:
+  EnforcedColonStyle: 'key'
+  EnforcedHashRocketStyle: 'key'
+
+Style/WordArray:
+  MinSize: 3
+
+Style/TrailingComma:
+  EnforcedStyleForMultiline: 'comma'
+
+Style/HashSyntax:
+  EnforcedStyle: 'ruby19'
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
