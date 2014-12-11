@@ -1,3 +1,5 @@
+require 'delegate'
+
 module ActiveRecord
   # = Active Record Schema Dumper
   #
