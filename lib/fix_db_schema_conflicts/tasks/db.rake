@@ -7,7 +7,7 @@ namespace :db do
       else
         "#{Rails.root}/db/schema.rb"
       end
-      rubocop_yml = File.expand_path('../../../.rubocop_schema.yml', __FILE__)
+      rubocop_yml = File.expand_path('../../../../.rubocop_schema.yml', __FILE__)
       `rubocop --auto-correct --config #{rubocop_yml} #{filename}`
       `sed -E -e 's/, +/, /g' #{filename} > db/schema.fixed.rb`
       `mv db/schema.fixed.rb #{filename}`
