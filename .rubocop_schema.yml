@@ -15,7 +15,10 @@ Style/AlignHash:
 Style/WordArray:
   MinSize: 3
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: 'comma'
+
+Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: 'comma'
 
 Style/HashSyntax:
