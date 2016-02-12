@@ -52,3 +52,9 @@ If you wish to use a version of Rubocop `< 0.36.0` or below, use `gem 'fix-db-sc
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## Contributors
+
+ - @TCampaigne
+ - @Lordnibbler
+ - @jakeonrails
