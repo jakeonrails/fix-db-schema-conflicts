@@ -2,7 +2,7 @@ Style/NumericLiterals:
   Exclude:
     - 'db/schema.rb'
 
-Style/SingleSpaceBeforeFirstArg:
+Style/SpaceBeforeFirstArg:
   Enabled: true
 
 Metrics/BlockNesting:
