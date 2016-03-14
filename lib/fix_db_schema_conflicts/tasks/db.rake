@@ -9,7 +9,7 @@ namespace :db do
       end
       rubocop_yml = File.expand_path('../../../../.rubocop_schema.yml', __FILE__)
       `bundle exec rubocop --auto-correct --config #{rubocop_yml} #{filename}`
-      `sed -E -e 's/, +/, /g' #{filename} > db/schema.fixed.rb`
+      `sed -E -e 's/([^ ]) +/\\1 /g' #{filename} > db/schema.fixed.rb`
       `mv db/schema.fixed.rb #{filename}`
     end
   end
