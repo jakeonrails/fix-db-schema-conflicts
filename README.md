@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jakeonrails/fix-db-schema-conflicts.svg?branch=master)](https://travis-ci.org/jakeonrails/fix-db-schema-conflicts)
+
 # fix-db-schema-conflicts
 
 It prevents db/schema.rb conflicts in your Rails projects when working with multiple team members.
