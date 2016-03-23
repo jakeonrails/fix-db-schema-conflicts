@@ -55,9 +55,10 @@ If you wish to use a version of Rubocop `< 0.36.0` or below, use `gem 'fix-db-sc
 
 ## Contributors
 
+ - @jakeonrails - Creator and maintainer
  - @TCampaigne
  - @Lordnibbler
- - @jakeonrails
+ - @timdiggins
 
 ## Releases
  - 1.2.1
