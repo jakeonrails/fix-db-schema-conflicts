@@ -58,3 +58,10 @@ If you wish to use a version of Rubocop `< 0.36.0` or below, use `gem 'fix-db-sc
  - @TCampaigne
  - @Lordnibbler
  - @jakeonrails
+
+## Releases
+ - 1.2.1
+  - Upgrade Rubocop to get major performance boost
+  - Add support for sorting of extensions
+  - Fix spacing regression introduced by Rubocop upgrade
+  - Add test suite and an integration test
