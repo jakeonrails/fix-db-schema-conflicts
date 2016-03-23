@@ -8,7 +8,11 @@ module ActiveRecord
   class SchemaDumper
 
     private
-    class TableSorter < SimpleDelegator
+    class ConnectionWithSorting < SimpleDelegator
+      def extensions
+        __getobj__.extensions.sort
+      end
+
       def columns(table)
         __getobj__.columns(table).sort_by(&:name)
       end
@@ -22,14 +26,25 @@ module ActiveRecord
       end
     end
 
-    def table_with_sorting(table, stream)
-      old_connection = @connection
-      @connection = TableSorter.new(old_connection)
-      result = table_without_sorting(table, stream)
-      @connection = old_connection
-      result
+    def extensions_with_sorting(*args)
+      with_sorting do
+        extensions_without_sorting(*args)
+      end
+    end
+    alias_method_chain :extensions, :sorting
+
+    def table_with_sorting(*args)
+      with_sorting do
+        table_without_sorting(*args)
+      end
     end
     alias_method_chain :table, :sorting
 
+    def with_sorting(&block)
+      old, @connection = @connection, ConnectionWithSorting.new(@connection)
+      result = yield
+      @connection = old
+      result
+    end
   end
 end
