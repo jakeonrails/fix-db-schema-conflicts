@@ -63,6 +63,8 @@ If you wish to use a version of Rubocop `< 0.36.0` or below, use `gem 'fix-db-sc
  - @timdiggins
 
 ## Releases
+ - 1.2.2
+  - Remove dependency on sed
  - 1.2.1
   - Upgrade Rubocop to get major performance boost
   - Add support for sorting of extensions
