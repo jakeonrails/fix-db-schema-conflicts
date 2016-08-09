@@ -1,13 +1,7 @@
 require 'delegate'
 
-module ActiveRecord
-  # = Active Record Schema Dumper
-  #
-  # This class is used to dump the database schema for some connection to some
-  # output format (i.e., ActiveRecord::Schema).
-  class SchemaDumper
-
-    private
+module FixDBSchemaConflicts
+  module SchemaDumper
     class ConnectionWithSorting < SimpleDelegator
       def extensions
         __getobj__.extensions.sort
@@ -26,21 +20,19 @@ module ActiveRecord
       end
     end
 
-    def extensions_with_sorting(*args)
+    def extensions(*args)
       with_sorting do
-        extensions_without_sorting(*args)
+        super(*args)
       end
     end
-    alias_method_chain :extensions, :sorting
 
-    def table_with_sorting(*args)
+    def table(*args)
       with_sorting do
-        table_without_sorting(*args)
+        super(*args)
       end
     end
-    alias_method_chain :table, :sorting
 
-    def with_sorting(&block)
+    def with_sorting
       old, @connection = @connection, ConnectionWithSorting.new(@connection)
       result = yield
       @connection = old
@@ -48,3 +40,5 @@ module ActiveRecord
     end
   end
 end
+
+ActiveRecord::SchemaDumper.send(:prepend, FixDBSchemaConflicts::SchemaDumper)
