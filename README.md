@@ -14,11 +14,13 @@ locally, and then get a new copy of master with the other's feature and
 migration. Then when they run migrations again, John's `tasks` table looks like
 this:
 
-    t.timestamp :updated_at t.string :name
+    t.timestamp :updated_at
+    t.string :name
 
 And Sara's looks like this:
 
-    t.string :name t.timestamp :updated_at
+    t.string :name
+    t.timestamp :updated_at
 
 And every time they run migrations before committing new code, their
 `db/schema.rb` file will be showing a change, because they are flipping the
