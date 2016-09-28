@@ -44,7 +44,9 @@ conflicts` will do the rest.
 
 Add this line to your application's Gemfile in your development group:
 
-```ruby gem 'fix-db-schema-conflicts' ```
+```ruby
+gem 'fix-db-schema-conflicts'
+```
 
 And then execute:
 
