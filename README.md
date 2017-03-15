@@ -81,15 +81,16 @@ old Ruby.
  - [@vsubramanian](https://github.com/vsubramanian)
 
 ## Releases
- - 2.0.1
+
+- 2.0.1
   - Fix bug that caused failure when project directory has a space in it
- - 2.0.0
+- 2.0.0
   - Allow usage of Rubocop >= 0.38.0
   - Remove Rails 5 deprecation warnings for using alias_method_chain
    - This upgrade breaks compatibility with Ruby 1.9x since 1.9x lacks #prepend
- - 1.2.2
+- 1.2.2
   - Remove dependency on sed
- - 1.2.1
+- 1.2.1
   - Upgrade Rubocop to get major performance boost
   - Add support for sorting of extensions
   - Fix spacing regression introduced by Rubocop upgrade
