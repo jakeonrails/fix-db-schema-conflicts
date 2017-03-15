@@ -72,14 +72,17 @@ old Ruby.
 
 ## Contributors
 
- - @jakeonrails - Creator and maintainer
- - @TCampaigne
- - @Lordnibbler
- - @timdiggins
- - @zoras
- - @jensljungblad
+ - [@jakeonrails](https://github.com/jakeonrails) - Creator and maintainer
+ - [@TCampaigne](https://github.com/TCampaigne)
+ - [@Lordnibbler](https://github.com/Lordnibbler)
+ - [@timdiggins](https://github.com/timdiggins)
+ - [@zoras](https://github.com/zoras)
+ - [@jensljungblad](https://github.com/jensljungblad)
+ - [@vsubramanian](https://github.com/vsubramanian)
 
 ## Releases
+ - 2.0.1
+  - Fix bug that caused failure when project directory has a space in it
  - 2.0.0
   - Allow usage of Rubocop >= 0.38.0
   - Remove Rails 5 deprecation warnings for using alias_method_chain
