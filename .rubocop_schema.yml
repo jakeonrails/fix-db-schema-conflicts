@@ -5,8 +5,7 @@ Style/ExtraSpacing:
   AllowForAlignment: false
 
 Style/NumericLiterals:
-  Exclude:
-    - 'db/schema.rb'
+  Enabled: false
 
 Style/SpaceBeforeFirstArg:
   Enabled: true

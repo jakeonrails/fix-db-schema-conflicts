@@ -59,7 +59,7 @@ schema-conflicts', '~> 1.0.2'`
 
 ## Older versions of Ruby:
 
-This gem only works with Ruby >= 2.0. Use versions 1.2.2 or below if you have an
+This gem only works with Ruby >= 2.2. Use versions 1.2.2 or below if you have an
 old Ruby.
 
 ## Contributing
@@ -79,9 +79,12 @@ old Ruby.
  - [@zoras](https://github.com/zoras)
  - [@jensljungblad](https://github.com/jensljungblad)
  - [@vsubramanian](https://github.com/vsubramanian)
+ - [@claytron](https://github.com/claytron)
 
 ## Releases
 
+- 3.0.0
+  - Only support Ruby 2.2+ since lower versions haved reached EOL.
 - 2.0.1
   - Fix bug that caused failure when project directory has a space in it
 - 2.0.0
