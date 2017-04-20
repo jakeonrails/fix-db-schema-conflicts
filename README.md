@@ -80,9 +80,12 @@ old Ruby.
  - [@jensljungblad](https://github.com/jensljungblad)
  - [@vsubramanian](https://github.com/vsubramanian)
  - [@claytron](https://github.com/claytron)
+ - [@amckinnell](https://github.com/amckinnell)
 
 ## Releases
-
+- 3.0.1
+  - Improve formatting to be more consistent (amckinnell)
+  - Bump rake dependency to bypass a rake bug in older version (amckinnell)
 - 3.0.0
   - Only support Ruby 2.2+ since lower versions haved reached EOL.
 - 2.0.1
