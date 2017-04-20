@@ -18,7 +18,7 @@ Style/AlignHash:
   EnforcedHashRocketStyle: 'key'
 
 Style/WordArray:
-  MinSize: 3
+  Enabled: false
 
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: 'comma'
