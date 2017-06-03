@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Fix DB Schema Conflicts' do
+RSpec.describe 'Fix DB Schema Conflicts' do
 
   let(:expected_lines) { reference_db_schema.lines }
 
