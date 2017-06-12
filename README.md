@@ -83,6 +83,8 @@ old Ruby.
  - [@amckinnell](https://github.com/amckinnell)
 
 ## Releases
+- 3.0.2
+  - Added support for new Rubocop 0.49+ schema (amckinnell)
 - 3.0.1
   - Improve formatting to be more consistent (amckinnell)
   - Bump rake dependency to bypass a rake bug in older version (amckinnell)
