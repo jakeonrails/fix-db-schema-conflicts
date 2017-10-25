@@ -13,6 +13,9 @@ Layout/ExtraSpacing:
 Layout/SpaceBeforeFirstArg:
   Enabled: true
 
+Style/Encoding:
+  Enabled: false
+
 Style/NumericLiterals:
   Enabled: false
 
