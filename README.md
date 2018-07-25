@@ -37,8 +37,8 @@ auto-correct flag to ensure a consistent output format.
 ## Usage
 
 You don't have to do anything different. It should just work. Simply run `rake
-db:migrate` or `rake db:schema:dump` as you would before and `fix-db-schema-
-conflicts` will do the rest.
+db:migrate` or `rake db:schema:dump` as you would before and 
+`fix-db-schema-conflicts` will do the rest.
 
 ## Installation
 
