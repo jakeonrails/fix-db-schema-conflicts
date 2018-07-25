@@ -54,8 +54,8 @@ And then execute:
 
 ## Older versions of Rubocop:
 
-If you wish to use a version of Rubocop `< 0.36.0` or below, use `gem 'fix-db-
-schema-conflicts', '~> 1.0.2'`
+If you wish to use a version of Rubocop `< 0.36.0` or below, use 
+`gem 'fix-db-schema-conflicts', '~> 1.0.2'`
 
 ## Older versions of Ruby:
 
