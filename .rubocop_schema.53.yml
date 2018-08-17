@@ -1,4 +1,4 @@
-# Configuration for Rubocop >= 0.49.0
+# Configuration for Rubocop >= 0.53.0
 
 Layout/AlignHash:
   EnforcedColonStyle: 'key'
