@@ -33,7 +33,8 @@ module FixDBSchemaConflicts
     end
 
     def with_sorting
-      old, @connection = @connection, ConnectionWithSorting.new(@connection)
+      old = @connection
+      @connection = ConnectionWithSorting.new(@connection)
       result = yield
       @connection = old
       result

@@ -1,11 +1,9 @@
 require 'spec_helper'
 
 RSpec.describe 'Fix DB Schema Conflicts' do
-
   let(:expected_lines) { reference_db_schema.lines }
 
   it 'generates a sorted schema with no extra spacing' do
-
     `cd spec/test-app && rm -f db/schema.rb && rake db:migrate`
 
     generated_lines = File.readlines('spec/test-app/db/schema.rb')
@@ -13,6 +11,7 @@ RSpec.describe 'Fix DB Schema Conflicts' do
     generated_lines.zip(expected_lines).each do |generated, expected|
       next if expected.nil?
       next if expected.start_with?('ActiveRecord::Schema.define')
+
       expect(generated).to eq(expected)
     end
   end

@@ -1,5 +1,4 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fix_db_schema_conflicts/version'
 
@@ -8,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = FixDBSchemaConflicts::VERSION
   spec.authors       = ['Jake Moffatt']
   spec.email         = ['jakeonrails@gmail.com']
-  spec.summary       = %q{Helps prevent unneeded db/schema.rb conflicts}
-  spec.description   = %q{Ensures consistent output of db/schema.rb despite local differences in the database}
+  spec.summary       = 'Helps prevent unneeded db/schema.rb conflicts'
+  spec.description   = 'Ensures consistent output of db/schema.rb despite local differences in the database'
   spec.homepage      = 'https://github.com/jakeonrails/fix-db-schema-conflicts'
   spec.license       = 'MIT'
 
@@ -19,9 +18,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.6'
+  spec.add_development_dependency 'rails', '~> 4.2.0'
   spec.add_development_dependency 'rake', '~> 11.2.0'
   spec.add_development_dependency 'rspec', '~>3.4.0'
-  spec.add_development_dependency 'rails', '~> 4.2.0'
   spec.add_development_dependency 'sqlite3', '~> 1.3.0'
 
   spec.add_dependency 'rubocop', '>= 0.38.0'
