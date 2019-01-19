@@ -22,6 +22,9 @@ Metrics/BlockNesting:
 Style/WordArray:
   Enabled: false
 
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: 'comma'
+
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: 'comma'
 
