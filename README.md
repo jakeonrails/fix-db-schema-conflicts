@@ -81,8 +81,11 @@ old Ruby.
  - [@vsubramanian](https://github.com/vsubramanian)
  - [@claytron](https://github.com/claytron)
  - [@amckinnell](https://github.com/amckinnell)
+ - [@rosscooperman](https://github.com/rosscooperman)
 
 ## Releases
+- 3.0.3
+  - Added support for new Rubocop 0.53+ schema (rosscooperman)
 - 3.0.2
   - Added support for new Rubocop 0.49+ schema (amckinnell)
 - 3.0.1
