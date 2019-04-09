@@ -37,8 +37,8 @@ auto-correct flag to ensure a consistent output format.
 ## Usage
 
 You don't have to do anything different. It should just work. Simply run `rake
-db:migrate` or `rake db:schema:dump` as you would before and `fix-db-schema-
-conflicts` will do the rest.
+db:migrate` or `rake db:schema:dump` as you would before and 
+`fix-db-schema-conflicts` will do the rest.
 
 ## Installation
 
@@ -54,8 +54,8 @@ And then execute:
 
 ## Older versions of Rubocop:
 
-If you wish to use a version of Rubocop `< 0.36.0` or below, use `gem 'fix-db-
-schema-conflicts', '~> 1.0.2'`
+If you wish to use a version of Rubocop `< 0.36.0` or below, use 
+`gem 'fix-db-schema-conflicts', '~> 1.0.2'`
 
 ## Older versions of Ruby:
 
@@ -81,8 +81,11 @@ old Ruby.
  - [@vsubramanian](https://github.com/vsubramanian)
  - [@claytron](https://github.com/claytron)
  - [@amckinnell](https://github.com/amckinnell)
+ - [@rosscooperman](https://github.com/rosscooperman)
 
 ## Releases
+- 3.0.3
+  - Added support for new Rubocop 0.53+ schema (rosscooperman)
 - 3.0.2
   - Added support for new Rubocop 0.49+ schema (amckinnell)
 - 3.0.1
