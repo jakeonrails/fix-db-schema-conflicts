@@ -9,5 +9,7 @@ Rake::Task['db:schema:dump'].enhance do
 
   autocorrect_config = FixDBSchemaConflicts::AutocorrectConfiguration.load
   rubocop_yml = File.expand_path("../../../../#{autocorrect_config}", __FILE__)
-  `bundle exec rubocop --auto-correct --config #{rubocop_yml} #{filename.shellescape}`
+  rubocop_options = '--only Layout,Style --safe-auto-correct  --format quiet'
+
+  `bundle exec rubocop  #{rubocop_options} --config #{rubocop_yml} #{filename.shellescape}`
 end
