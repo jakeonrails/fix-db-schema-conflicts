@@ -43,11 +43,10 @@ ActiveRecord::Schema.define(version: 20160322223258) do
     t.string "state"
     t.datetime "updated_at", null: false
     t.string "zip"
+    t.index ["city"], name: "index_companies_on_city"
+    t.index ["name"], name: "index_companies_on_name"
+    t.index ["state"], name: "index_companies_on_state"
   end
-
-  add_index "companies", ["city"], name: "index_companies_on_city"
-  add_index "companies", ["name"], name: "index_companies_on_name"
-  add_index "companies", ["state"], name: "index_companies_on_state"
 
   create_table "people", force: :cascade do |t|
     t.integer "age"
