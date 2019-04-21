@@ -1,4 +1,6 @@
+require 'open3'
 require 'shellwords'
+
 require_relative '../autocorrect_configuration'
 
 Rake::Task['db:schema:dump'].enhance do
@@ -17,5 +19,12 @@ Rake::Task['db:schema:dump'].enhance do
 
   rubocop_command = "bundle exec rubocop #{rubocop_options} --config #{rubocop_yml} #{schema_filename.shellescape}"
 
-  `#{rubocop_command}`
+  _stdout_str, stderr_str, status = Open3.capture3(rubocop_command)
+
+  unless status.success?
+    raise <<~MSG
+      Unable to process #{schema_filename} using Rubocop
+      Error: #{stderr_str}
+    MSG
+  end
 end
