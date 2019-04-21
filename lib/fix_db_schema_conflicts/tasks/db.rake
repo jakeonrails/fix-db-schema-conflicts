@@ -9,7 +9,13 @@ Rake::Task['db:schema:dump'].enhance do
   else
     "#{Rails.root}/db/schema.rb"
   end
+
   autocorrect_config = FixDBSchemaConflicts::AutocorrectConfiguration.load
   rubocop_yml = File.expand_path("../../../../#{autocorrect_config}", __FILE__)
-  `bundle exec rubocop --auto-correct --config #{rubocop_yml} #{schema_filename.shellescape}`
+
+  rubocop_options = '--auto-correct'
+
+  rubocop_command = "bundle exec rubocop #{rubocop_options} --config #{rubocop_yml} #{schema_filename.shellescape}"
+
+  `#{rubocop_command}`
 end
