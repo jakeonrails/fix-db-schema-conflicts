@@ -54,13 +54,13 @@ And then execute:
 
 ## Older versions of Rubocop:
 
-If you wish to use a version of Rubocop `< 0.36.0` or below, use 
-`gem 'fix-db-schema-conflicts', '~> 1.0.2'`
+This gem works with versions of Rubocop >= 0.52.0. Use version 3.0.3 if 
+you wish to use an earlier version of Rubocop.
 
 ## Older versions of Ruby:
 
-This gem only works with Ruby >= 2.2. Use versions 1.2.2 or below if you have an
-old Ruby.
+This gem works with Ruby >= 2.4. Use version 3.0.3 if you wish to use 
+an earlier version of Ruby.
 
 ## Contributing
 
@@ -84,6 +84,13 @@ old Ruby.
  - [@rosscooperman](https://github.com/rosscooperman)
 
 ## Releases
+- 4.0.0
+  - Improve performance
+  - Better compatibility with Rails db:schema:dump task
+  - Only support Ruby 2.4+
+  - Only support Rails 5.x
+  - Only support Rubocop 0.52+
+  - Bump development dependencies
 - 3.0.3
   - Added support for new Rubocop 0.53+ schema (rosscooperman)
 - 3.0.2
@@ -92,7 +99,7 @@ old Ruby.
   - Improve formatting to be more consistent (amckinnell)
   - Bump rake dependency to bypass a rake bug in older version (amckinnell)
 - 3.0.0
-  - Only support Ruby 2.2+ since lower versions haved reached EOL.
+  - Only support Ruby 2.2+ since lower versions have reached EOL.
 - 2.0.1
   - Fix bug that caused failure when project directory has a space in it
 - 2.0.0
