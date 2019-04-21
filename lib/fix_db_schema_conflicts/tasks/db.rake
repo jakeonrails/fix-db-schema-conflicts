@@ -2,8 +2,11 @@ require 'open3'
 require 'shellwords'
 
 require_relative '../autocorrect_configuration'
+require_relative '../rubocop_version'
 
 Rake::Task['db:schema:dump'].enhance do
+  include FixDBSchemaConflicts::RubocopVersion
+
   puts "Dumping database schema with fix-db-schema-conflicts gem"
 
   schema_filename = ENV['SCHEMA'] || if defined? ActiveRecord::Tasks::DatabaseTasks
@@ -15,7 +18,8 @@ Rake::Task['db:schema:dump'].enhance do
   autocorrect_config = FixDBSchemaConflicts::AutocorrectConfiguration.load
   rubocop_yml = File.expand_path("../../../#{autocorrect_config}", __dir__)
 
-  rubocop_options = '--format quiet --auto-correct --only Layout,Style'
+  auto_correct_options = less_than_rubocop?(60) ? '--auto-correct' : '--safe-auto-correct'
+  rubocop_options = "--format quiet #{auto_correct_options} --only Layout,Style"
 
   rubocop_command = "bundle exec rubocop #{rubocop_options} --config #{rubocop_yml} #{schema_filename.shellescape}"
 
