@@ -1,5 +1,9 @@
+require 'fix_db_schema_conflicts/rubocop_version'
+
 module FixDBSchemaConflicts
   class AutocorrectConfiguration
+    include FixDBSchemaConflicts::RubocopVersion
+
     def self.load
       new.load
     end
@@ -12,12 +16,6 @@ module FixDBSchemaConflicts
       else
         '.rubocop_schema.53.yml'
       end
-    end
-
-    private
-
-    def less_than_rubocop?(ver)
-      Gem.loaded_specs['rubocop'].version < Gem::Version.new("0.#{ver}.0")
     end
   end
 end
