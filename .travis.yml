@@ -10,9 +10,9 @@ gemfile:
  - gemfiles/rails_5.2_rubocop_57.gemfile
  - gemfiles/rails_5.2_rubocop_67.gemfile
 rvm:
- - "2.4.0"
- - "2.5.0"
- - "2.6.0"
+ - "2.4.5"
+ - "2.5.5"
+ - "2.6.3"
 before_install:
  - gem update --system
  - gem install bundler
