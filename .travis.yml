@@ -1,5 +1,14 @@
 language: ruby
+gemfile:
+ - gemfiles/rails_5.0_rubocop_52.gemfile
+ - gemfiles/rails_5.0_rubocop_57.gemfile
+ - gemfiles/rails_5.0_rubocop_67.gemfile
+ - gemfiles/rails_5.1_rubocop_52.gemfile
+ - gemfiles/rails_5.1_rubocop_57.gemfile
+ - gemfiles/rails_5.1_rubocop_67.gemfile
+ - gemfiles/rails_5.2_rubocop_52.gemfile
+ - gemfiles/rails_5.2_rubocop_57.gemfile
+ - gemfiles/rails_5.2_rubocop_67.gemfile
 rvm:
- - "2.2.0"
- - "2.3.0"
  - "2.4.0"
+ - "2.5.0"
