@@ -1,6 +1,6 @@
 # Configuration for Rubocop >= 0.53.0
 
-Layout/AlignHash:
+Layout/HashAlignment:
   EnforcedColonStyle: 'key'
   EnforcedHashRocketStyle: 'key'
 
