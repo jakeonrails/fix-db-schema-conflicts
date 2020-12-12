@@ -10,6 +10,9 @@ Layout/HashAlignment:
   EnforcedColonStyle: 'key'
   EnforcedHashRocketStyle: 'key'
 
+Layout/LineLength:
+  Enabled: false
+
 Layout/SpaceBeforeFirstArg:
   Enabled: true
 
