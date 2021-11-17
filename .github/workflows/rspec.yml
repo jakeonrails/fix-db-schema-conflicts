@@ -7,8 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     strategy:
+      fail-fast: false
       matrix:
-        ruby: [ 2.3, 2.4, 2.5, 2.6 ]
+        ruby: [ 2.3, 2.4, 2.5, 2.6, 2.7, '3.0' ]
     name: rspec with ruby ${{ matrix.ruby }}
     steps:
       - uses: actions/checkout@v2
@@ -16,5 +17,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+          bundler: 1
 
       - run: bundle exec rspec
