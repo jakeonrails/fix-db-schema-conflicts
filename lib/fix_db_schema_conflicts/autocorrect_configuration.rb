@@ -9,8 +9,10 @@ module FixDBSchemaConflicts
         '.rubocop_schema.yml'
       elsif less_than_rubocop?(53)
         '.rubocop_schema.49.yml'
-      else
+      elsif less_than_rubocop?(77)
         '.rubocop_schema.53.yml'
+      else
+        '.rubocop_schema.77.yml'
       end
     end
 
