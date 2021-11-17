@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/jakeonrails/fix-db-schema-conflicts.svg?branch=master)](https://travis-ci.org/jakeonrails/fix-db-schema-conflicts)
-
 # fix-db-schema-conflicts
 
 It prevents db/schema.rb conflicts in your Rails projects when working with
@@ -82,8 +80,13 @@ old Ruby.
  - [@claytron](https://github.com/claytron)
  - [@amckinnell](https://github.com/amckinnell)
  - [@rosscooperman](https://github.com/rosscooperman)
+ - [@cabello](https://github.com/cabello)
+ - [@justisb](https://github.com/justisb)
 
 ## Releases
+- 3.1.0
+  - Added support for ruby 3 (cabello)
+  - Added support for new Rubocop 0.77+ schema (justisb)
 - 3.0.3
   - Added support for new Rubocop 0.53+ schema (rosscooperman)
 - 3.0.2
