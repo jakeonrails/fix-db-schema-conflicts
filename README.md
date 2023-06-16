@@ -35,7 +35,7 @@ auto-correct flag to ensure a consistent output format.
 ## Usage
 
 You don't have to do anything different. It should just work. Simply run `rake
-db:migrate` or `rake db:schema:dump` as you would before and 
+db:migrate` or `rake db:schema:dump` as you would before and
 `fix-db-schema-conflicts` will do the rest.
 
 ## Installation
@@ -52,7 +52,7 @@ And then execute:
 
 ## Older versions of Rubocop:
 
-If you wish to use a version of Rubocop `< 0.36.0` or below, use 
+If you wish to use a version of Rubocop `< 0.36.0` or below, use
 `gem 'fix-db-schema-conflicts', '~> 1.0.2'`
 
 ## Older versions of Ruby:
@@ -82,8 +82,11 @@ old Ruby.
  - [@rosscooperman](https://github.com/rosscooperman)
  - [@cabello](https://github.com/cabello)
  - [@justisb](https://github.com/justisb)
+ - [@sg650](https://github.com/sg650)
 
 ## Releases
+- 3.1.1
+  - Use modern autocorrect flag for rubocop >= 1.30 (sg650)
 - 3.1.0
   - Added support for ruby 3 (cabello)
   - Added support for new Rubocop 0.77+ schema (justisb)
@@ -101,7 +104,7 @@ old Ruby.
 - 2.0.0
   - Allow usage of Rubocop >= 0.38.0
   - Remove Rails 5 deprecation warnings for using alias_method_chain
-   - This upgrade breaks compatibility with Ruby 1.9x since 1.9x lacks #prepend
+  - This upgrade breaks compatibility with Ruby 1.9x since 1.9x lacks #prepend
 - 1.2.2
   - Remove dependency on sed
 - 1.2.1
