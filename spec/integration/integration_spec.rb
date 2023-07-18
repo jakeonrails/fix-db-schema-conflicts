@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20160322223258) do
     t.string "state"
     t.datetime "updated_at", null: false
     t.string "zip"
+    t.bigint "entity_registry_id"
+    t.integer "corporation_type_id"
   end
 
   add_index "companies", ["city"], name: "index_companies_on_city"
