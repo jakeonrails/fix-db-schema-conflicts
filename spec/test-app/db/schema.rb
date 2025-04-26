@@ -12,26 +12,26 @@
 
 ActiveRecord::Schema[8.0].define(version: 2016_03_22_223258) do
   create_table "companies", force: :cascade do |t|
-    t.string "name"
     t.string "addr1"
     t.string "addr2"
     t.string "city"
-    t.string "state"
-    t.string "zip"
-    t.string "phone"
     t.datetime "created_at", null: false
+    t.string "name"
+    t.string "phone"
+    t.string "state"
     t.datetime "updated_at", null: false
+    t.string "zip"
     t.index ["city"], name: "index_companies_on_city"
     t.index ["name"], name: "index_companies_on_name"
     t.index ["state"], name: "index_companies_on_state"
   end
 
   create_table "people", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
     t.integer "age"
     t.date "birthdate"
     t.datetime "created_at", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "updated_at", null: false
   end
 end
