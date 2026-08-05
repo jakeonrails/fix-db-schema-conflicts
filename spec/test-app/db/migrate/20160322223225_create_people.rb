@@ -1,4 +1,4 @@
-class CreatePeople < ActiveRecord::Migration
+class CreatePeople < ActiveRecord::Migration[8.0]
   def change
     create_table :people do |t|
       t.string :first_name
@@ -6,7 +6,7 @@ class CreatePeople < ActiveRecord::Migration
       t.integer :age
       t.date :birthdate
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
