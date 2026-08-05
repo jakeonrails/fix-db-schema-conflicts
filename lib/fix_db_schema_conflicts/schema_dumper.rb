@@ -12,11 +12,30 @@ module FixDBSchemaConflicts
       end
 
       def indexes(table)
-        __getobj__.indexes(table).sort_by(&:name)
+        indexes_string_sort(table)
+        # __getobj__.indexes(table).sort_by(&:name)
       end
 
       def foreign_keys(table)
         __getobj__.indexes(table).sort_by(&:name)
+      end
+
+      def indexes_string_sort(table)
+        cols = __getobj__.indexes(table)
+        cols.reduce({ids:[],datetimes:[],other:[]}) do |h,col|
+          case col.name
+          when /_id$"/
+            h[:ids] << col
+          when /_at$"/
+            h[:datetimes] << col
+          else
+            h[:other] << col
+          end
+          h
+        end.tap {|h| h[:ids      ] = h[:ids      ].sort{|a,b| a.name <=> b.name }}
+        .tap    {|h| h[:datetimes] = h[:datetimes].sort{|a,b| a.name <=> b.name }}
+        .tap    {|h| h[:other    ] = h[:other    ].sort{|a,b| a.name <=> b.name }}
+        .values.flatten
       end
     end
 
